@@ -6,7 +6,7 @@ const database = {
         { id: 4, location: "Antwerp, Belgium", volume: "12.04" }
     ],
     haulers: [
-        { id: 1, dockId: 1, name: "Yoruhime"},
+        { id: 1, dockId: 2, name: "Yoruhime"},
         { id: 2, dockId: 2, name: "Ichigohime"},
         { id: 3, dockId: 3, name: "Emilyhime"},
         { id: 4, dockId: 4, name: "Mikkihime"},
