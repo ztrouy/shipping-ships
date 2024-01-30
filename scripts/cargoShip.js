@@ -36,9 +36,25 @@ document.addEventListener(
 )
 
 export const cargoShipsList = () => {
-    const cargoShips = getCargoShips()
+    const cargoShips = structuredClone(getCargoShips())
 
-    let cargoHTML = "<ul>"
+    // Alphabetizes the Cargo Ships
+    cargoShips.sort((a, b) => {
+        // Ensures that case does not effect sorting
+        const nameA = a.name.toLowerCase()
+        const nameB = b.name.toLowerCase()
+        
+        // Informs Array Element which direction to move, if at all
+        if (nameA < nameB) {
+            return -1
+        } else if (nameA > nameB) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
+    let cargoHTML = `<div class="header">Shipping Ships</div><ul>`
 
     for (const ship of cargoShips) {
         cargoHTML += `<li data-type="cargo"
