@@ -52,7 +52,7 @@ document.addEventListener(
 export const dockList = () => {
     const docks = getDocks()
 
-    let docksHTML = "<ul>"
+    let docksHTML = `<div class="header">Docks</div><ul>`
 
     for (const dock of docks) {
         docksHTML += `<li data-type="dock"

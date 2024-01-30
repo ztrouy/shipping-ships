@@ -38,7 +38,7 @@ document.addEventListener(
 export const cargoShipsList = () => {
     const cargoShips = getCargoShips()
 
-    let cargoHTML = "<ul>"
+    let cargoHTML = `<div class="header">Shipping Ships</div><ul>`
 
     for (const ship of cargoShips) {
         cargoHTML += `<li data-type="cargo"

@@ -31,7 +31,7 @@ document.addEventListener(
 export const haulerShipsList = () => {
     const haulers = getHaulerShips()
 
-    let haulersHTML = "<ul>"
+    let haulersHTML = `<div class="header">Hauling Ships</div>\n<ul>`
 
     for (const hauler of haulers) {
         haulersHTML += `<li data-type="hauler"
