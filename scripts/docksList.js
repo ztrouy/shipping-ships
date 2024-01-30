@@ -52,6 +52,22 @@ document.addEventListener(
 export const dockList = () => {
     const docks = structuredClone(getDocks())
 
+    // Alphabetizes the Docks
+    docks.sort((a, b) => {
+        // Ensures that case does not effect sorting
+        const locationA = a.location.toLowerCase()
+        const locationB = b.location.toLowerCase()
+        
+        // Informs Array Element which direction to move, if at all
+        if (locationA < locationB) {
+            return -1
+        } else if (locationA > locationB) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
     let docksHTML = `<div class="header">Docks</div><ul>`
 
     for (const dock of docks) {
