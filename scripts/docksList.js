@@ -50,7 +50,7 @@ document.addEventListener(
 )
 
 export const dockList = () => {
-    const docks = getDocks()
+    const docks = structuredClone(getDocks())
 
     let docksHTML = `<div class="header">Docks</div><ul>`
 

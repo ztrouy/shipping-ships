@@ -36,7 +36,7 @@ document.addEventListener(
 )
 
 export const cargoShipsList = () => {
-    const cargoShips = getCargoShips()
+    const cargoShips = structuredClone(getCargoShips())
 
     let cargoHTML = `<div class="header">Shipping Ships</div><ul>`
 
